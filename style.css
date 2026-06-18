@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Sora", sans-serif;
+    user-select: none;
+}
+#desktop{
+    width: 100%;
+    height: calc(100% - 60px);
+    position: absolute;
+    padding: 20px;
+    background-image: url(./wallpapers/bg.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#taskbar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--panel);
+    border-top: 1px solid var(--border);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   BANANA OS OFFICIAL THEMES
+   ========================================================================== 
+*/
+:root {
+    --primary:        #e7e7ff;
+    --panel:          #dadada;
+    --secondary:      #f8fafc;
+    --border:         #cbd5e1;
+    --text:           #334155;
+}
+body[data-theme="moon-white"] {
+    --primary:        #e5e5ea;
+    --panel:          #f2f2f7;
+    --secondary:      #fafafa;
+    --border:         #d1d1d6;
+    --text:           #1c1c1e;
+}
+body[data-theme="coal-black"] {
+    --primary:        #121212;
+    --panel:          #1e1e1e;
+    --secondary:      #121212;
+    --border:         #2c2c2c;
+    --text:           #e5e5ea;
+}
+body[data-theme="dark-cherry"] {
+    --primary:        #1a0f11;
+    --panel:          #251417;
+    --secondary:      #12090b;
+    --border:         #4a151e;
+    --text:           #ffccd3;
+}
+body[data-theme="dark-cobalt"] {
+    --primary:        #0b111e;
+    --panel:          #131b2e;
+    --secondary:      #080c14;
+    --border:         #1d4ed8;
+    --text:           #d0e1fd;
+}
