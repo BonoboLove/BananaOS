@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 
+:root{
+    --primary: #F4F4F4;
+    --secondary: #E6E6E6;
+    --extra: #ACACAC;
+    --main: #333333;
+    --muted: #666666;
+    --acent: #929292;
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -9,7 +17,7 @@
 }
 #desktop{
     width: 100%;
-    height: calc(100% - 60px);
+    height: 100%;
     position: absolute;
     padding: 20px;
     background-image: url(./wallpapers/bg.gif);
@@ -22,68 +30,77 @@
     left: 0;
     width: 100%;
     height: 60px;
-    background-color: var(--panel);
-    border-top: 1px solid var(--border);
-    color: var(--text);
+    background-color: var(--secondary);
+    border-top: 1px solid var(--extra);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 15px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   BANANA OS OFFICIAL THEMES
-   ========================================================================== 
-*/
-:root {
-    --primary:        #e7e7ff;
-    --panel:          #dadada;
-    --secondary:      #f8fafc;
-    --border:         #cbd5e1;
-    --text:           #334155;
+#taskbar-apps{
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+    padding: 6px;
+    gap: 6px;
+    align-items: center;
 }
-body[data-theme="moon-white"] {
-    --primary:        #e5e5ea;
-    --panel:          #f2f2f7;
-    --secondary:      #fafafa;
-    --border:         #d1d1d6;
-    --text:           #1c1c1e;
+.app-tab{
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4cqh;
+    transition: 0.4s background;
 }
-body[data-theme="coal-black"] {
-    --primary:        #121212;
-    --panel:          #1e1e1e;
-    --secondary:      #121212;
-    --border:         #2c2c2c;
-    --text:           #e5e5ea;
+.app-tab:hover{
+    background-color: color-mix(in srgb, var(--extra), transparent 70%);
 }
-body[data-theme="dark-cherry"] {
-    --primary:        #1a0f11;
-    --panel:          #251417;
-    --secondary:      #12090b;
-    --border:         #4a151e;
-    --text:           #ffccd3;
+.app-tab:active{
+    background-color: color-mix(in srgb, var(--extra), transparent 40%);
 }
-body[data-theme="dark-cobalt"] {
-    --primary:        #0b111e;
-    --panel:          #131b2e;
-    --secondary:      #080c14;
-    --border:         #1d4ed8;
-    --text:           #d0e1fd;
+#system-tray{
+    display: flex;
+    width: 250px;
+    height: 100%;
+    padding: 8px;
+    gap: 4px;
+    align-items: center;
+    color: var(--main);
+    font-size: 12px;
+    font-weight: 500;
+    justify-content: space-around;
 }
+.tray-icons{
+    height: 70%;
+    aspect-ratio: 1 / 1;
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 80% 80%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: color-mix(in srgb, var(--extra), transparent 90%);
+    transition: background-color 0.4s;
+}
+.tray-icons:hover{
+    background-color: color-mix(in srgb, var(--extra), transparent 70%);
+}
+#time-wrapper{
+    height: calc(100% + 2px);
+    text-align: center;
+    padding: 2px;
+    font-size: 1.4cqh;
+}
+#clock{font-size: 1.6cqh;}
+#wifi{background-image: url(https://img.icons8.com/?size=100&id=0jZAf2FqZ3be&format=png);}
+#sound{background-image: url(https://img.icons8.com/?size=100&id=o8eI9Fvy3bbe&format=png);}
+#battery{background-image: url(https://img.icons8.com/?size=100&id=WZXQfJWER0kY&format=png);}
+#noti-bell{background-image: url(https://img.icons8.com/?size=100&id=gnsB3xE8Q5Et&format=png);}
